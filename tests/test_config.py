@@ -15,4 +15,4 @@ def test_project_config_loads_for_dev() -> None:
     cfg = ProjectConfig.from_yaml(str(PROJECT_CONFIG), "dev")
 
     assert cfg.full_volume_path == "llmops_dev.victor_kuznetsov_aarini.arxiv_files"
-    assert cfg.warehouse_id == "3f3be67cb34efb5f"
+    assert cfg.warehouse_id == "665a30cc7646b158"
