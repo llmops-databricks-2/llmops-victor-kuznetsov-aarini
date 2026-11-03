@@ -1,5 +1,7 @@
 # Project configuration for the LLMOps course, filled in for you at onboarding.
 # Resources are provisioned at onboarding except the volume, which you create during the course.
+# embedding_endpoint is the serving endpoint for ai_query, AI Search and DatabricksServingEndpoint;
+# embedding_service is the AI Gateway model service for the OpenAI client (README.md).
 
 # Your usage policy: set it on every serverless job, endpoint and app you create.
 usage_policy_id: "938e559f-0ebd-3652-a43a-42a0774b44be"
@@ -13,9 +15,10 @@ dev:
   schema: "victor_kuznetsov_aarini"
   volume: "arxiv_files"
   llm_endpoint: "course_ops.gateway.chat"
-  embedding_endpoint: "course_ops.gateway.embed"
-  warehouse_id: "3f3be67cb34efb5f"
-  experiment_path: "/llmops/victor_kuznetsov_aarini-dev"
+  embedding_endpoint: "databricks-gte-large-en"
+  embedding_service: "course_ops.gateway.embed"
+  warehouse_id: "665a30cc7646b158"
+  experiment_path: "/llmops/victor-kuznetsov-aarini-dev"
   # Your provisioned Lakebase project.
   lakebase_instance: "lb-llmops-victor-kuznetsov-aarini"
 
@@ -25,9 +28,10 @@ acc:
   schema: "victor_kuznetsov_aarini"
   volume: "arxiv_files"
   llm_endpoint: "course_ops.gateway.chat"
-  embedding_endpoint: "course_ops.gateway.embed"
-  warehouse_id: "3f3be67cb34efb5f"
-  experiment_path: "/llmops/victor_kuznetsov_aarini-acc"
+  embedding_endpoint: "databricks-gte-large-en"
+  embedding_service: "course_ops.gateway.embed"
+  warehouse_id: "665a30cc7646b158"
+  experiment_path: "/llmops/victor-kuznetsov-aarini-acc"
   # Your provisioned Lakebase project for this environment.
   lakebase_instance: "lb-llmops-victor-kuznetsov-aarini"
 
@@ -37,8 +41,9 @@ prd:
   schema: "victor_kuznetsov_aarini"
   volume: "arxiv_files"
   llm_endpoint: "course_ops.gateway.chat"
-  embedding_endpoint: "course_ops.gateway.embed"
-  warehouse_id: "3f3be67cb34efb5f"
-  experiment_path: "/llmops/victor_kuznetsov_aarini-prd"
+  embedding_endpoint: "databricks-gte-large-en"
+  embedding_service: "course_ops.gateway.embed"
+  warehouse_id: "665a30cc7646b158"
+  experiment_path: "/llmops/victor-kuznetsov-aarini-prd"
   # Your provisioned Lakebase project for this environment.
   lakebase_instance: "lb-llmops-victor-kuznetsov-aarini"
